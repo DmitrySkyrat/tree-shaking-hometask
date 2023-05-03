@@ -22,9 +22,13 @@ module.exports = {
       }
     ]
   },
-  mode: 'development',
+  mode: 'production',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     port: 9000
-  }
+  },
+  optimization: {
+    usedExports: false,
+    providedExports: false,
+  },
 };
